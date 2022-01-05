@@ -1,0 +1,139 @@
+.legalContainer {
+    margin: auto;
+    background-color: transparent;
+}
+
+.legalContainer .content {
+    color: #666!important;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 120px 15px 15px 15px;
+}
+
+.legalContainer .content p {
+    margin-bottom: 15px;
+}
+
+.legalContainer .content p:first{
+    font-size: 24px;
+}
+
+.legalContainer .content ul {
+    list-style: disc inside !important;
+}
+
+.legalContainer .content ul li:last-child {
+    list-style: disc inside !important;
+    margin-bottom: 15px !important;
+}
+
+.legalContainer .content ol {
+    list-style: decimal inside !important;
+}
+
+.legalContainer .content ol li:last-child {
+    list-style: decimal inside !important;
+    margin-bottom: 15px !important;
+}
+
+.legalContainer .content h1 {
+    font-size: 2em;
+}
+
+.legalContainer .content h2 {
+    font-size: 1.55em;
+    margin-bottom: 0.3em;
+}
+
+.legalContainer .content h3 {
+    font-size: 1.2em;
+}
+
+.indexCountryList {
+    list-style: none;
+}
+
+.textBig {
+    font-weight: normal;
+    font-size: 18pt;
+    font-family: 'Arial Narrow';
+    color: black;
+}
+
+.textBoldUnderline
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.textGeneral {
+    font-weight: normal;
+    font-size: 9.0pt;
+    font-family: 'Arial Narrow';
+    color: black;
+}
+
+.textSmall {
+    font-weight: normal;
+    font-size: 7.0pt;
+    font-family: 'Arial Narrow';
+    color: black;
+}
+.textInbox {
+    margin-bottom: 6.0pt;
+    padding: 1.0pt 4.0pt 1.0pt 4.0pt;
+}
+.box {
+    mso-element: para-border-div;
+    margin-bottom: 6pt;
+    border: solid windowtext 1.5pt;
+    padding: 1.0pt 4.0pt 1.0pt 4.0pt;
+}
+
+.shaded{
+    background-color: lightgray;
+}
+
+.fillInTable{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.mobileHide {
+    display: none !important;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+    .mobileHide {
+        display: block !important;
+    }
+
+    .mobileShow {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .mobileHide {
+        display: none !important;
+    }
+
+    .mobileShow {
+        display: block !important;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 400dpi) {
+    .content {
+        font-size: 120%;
+    }
+}

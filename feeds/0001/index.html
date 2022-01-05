@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title>Pride Fitness Новости</title>
+    <script type="text/javascript" src="js/jquery2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            var w = window;
+
+            function monitor() {
+                nike.unlisten(nike.EVENT_REQUESTED_SCRIPTS_LOADED, monitor);
+                var originalRequest = nike.ScriptLoader.request;
+                nike.ScriptLoader.request = function request(o, a, b) {
+
+                    originalRequest(o, function success(i) {
+                        if (o.data && o.data.gadgetName === 'nike.gadget.mobile.OneNikeNav') {
+                            nike.ScriptLoader.request = originalRequest;
+                            if (i && i.data) {
+                                i.data = i.data.replace(/<script.*unite.*<\/script>/, '');
+                                i.data = i.data.replace(/id="nike-unite/g, 'id="off-nike-unite');
+                            }
+                        }
+                        if (a) {
+                            a(i);
+                        }
+                    }, function failure() {
+                        if (o.data && o.data.gadgetName === 'nike.gadget.mobile.OneNikeNav') {
+                            nike.ScriptLoader.request = originalRequest;
+                        }
+                        if (b) {
+                            b.apply(arguments);
+                        }
+                    });
+                };
+            };
+            // Wait for the nike.listen object to be ready, and then
+            // listen for the EVENT_REQUESTED_SCRIPTS_LOADED event
+            function injectMonitor(w, c) {
+                if (!w.nike || !w.nike.listen) {
+                    if (c <= 1000) {
+                        setTimeout(function () {
+                            injectMonitor(w, c++);
+                        }, 10);
+                    }
+                } else {
+                    nike.listen(nike.EVENT_REQUESTED_SCRIPTS_LOADED, monitor);
+                }
+            };
+            injectMonitor(w, 0);
+        });
+    </script>
+    <script type="text/javascript">
+        var nsgConfig = {
+            HOST: 'https://www.nike.com',
+            BASEPATH: '/styleguide/nsg/',
+            TENANT: 'NIKE',
+            LOCALE: 'en_us',
+            PLATFORM: 'desktop',
+            PLACEMENT: 'prepend',
+            INPUT: 'touch'
+        };
+    </script>
+    <style>
+        .nav-panel__btn [class*=nsg-glyph--] {
+            position: absolute;
+        }
+
+        span.nav-right a {
+            text-decoration: none;
+        }
+    </style>
+    <script type="text/javascript" src="js/js.js"></script>
+    <!-- Stylesheet should go here -->
+    <link rel="stylesheet" href="css/legal.css" />
+    <link rel="stylesheet" href="css/min.css" />
+    <link rel="stylesheet" href="css/mins.css" />
+    <link rel="stylesheet" media="screen" href="css/news.css" />
+    <link rel="stylesheet" media="screen" href="css/news1.css" />
+    <link rel="stylesheet" media="screen, projection" href="css/news2.css" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        .nav-panel__btn [class*=nsg-glyph--] {
+            position: absolute;
+        }
+
+        span.nav-right a {
+            text-decoration: none;
+        }
+    </style>
+</head><br>
+<center><img src="img/app_logo_black.png"></center>
+
+<body class="legalContainer Desktop Mac">
+
+    <div class="legalAgreement nsg-font-family--platform content" id="legalContainer">
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <body class="body--news">
+            <div class="c-global-navigation ">
+                <header class="c-header">
+
+                    <div class="c-header__text">
+                        <p class="c-header__headline">
+
+                            <a class="c-header__link" href="/">Изменение графика работы основных площадок</a>
+                        <p>
+                            <center>
+                                <h5>Дата публикации: 3 января 2022</h5>
+                            </center>
+                        </p>
+                        </p>
+                    </div>
+                    <div class="slide-wrapper">
+                        <div class="slide-content">
+                            <center><img alt="Nike Tech Pack Fall 2018 5"
+                                    class="gallery__carousel__img js-lazy-slide js-gallery-slide js-gallery-img js-gallery-img--inline"
+                                    src="img/feed_0001.jpg" />
+                            </center>
+                        </div>
+                    </div>
+                    <div class="se-carousel__caption">
+                        <center>
+                            <p class="text--p">График работы основных площадок будет изменен с 10 декабря</p>
+                        </center>
+                        <p>
+                            Уважаемые клиенты и посетители клуба сообщаем что график работы основных клубов с 10 декабря
+                            будет изменен. Уважаемые клиенты и посетители клуба сообщаем что график работы основных
+                            клубов с 10 декабря будет изменен. Уважаемые клиенты и посетители клуба сообщаем что график
+                            работы основных клубов с 10 декабря будет изменен. Уважаемые клиенты и посетители клуба
+                            сообщаем что график работы основных клубов с 10 декабря будет изменен. Уважаемые клиенты и
+                            посетители клуба сообщаем что график работы основных клубов с 10 декабря будет изменен.
+                            Уважаемые клиенты и посетители клуба сообщаем что график работы основных клубов с 10 декабря
+                            будет изменен. Уважаемые клиенты и посетители клуба сообщаем что график работы основных
+                            клубов с 10 декабря будет изменен. Уважаемые клиенты и посетители клуба сообщаем что график
+                            работы основных клубов с 10 декабря будет изменен.</p>
+
+                    </div>
+            </div>
+    </div>
+    </header>
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25821760-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_trackEvent', 'Nike Tech Pack Fall 2018', 'pageviews', 'views']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
